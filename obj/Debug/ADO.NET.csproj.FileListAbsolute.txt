@@ -1,0 +1,15 @@
+E:\Data\WinForm\ADO.NET\bin\Debug\ADO.NET.exe.config
+E:\Data\WinForm\ADO.NET\bin\Debug\ADO.NET.exe
+E:\Data\WinForm\ADO.NET\bin\Debug\ADO.NET.pdb
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.csproj.AssemblyReference.cache
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.Form1.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.Properties.Resources.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.csproj.GenerateResource.cache
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.csproj.CoreCompileInputs.cache
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.exe
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.pdb
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.FormDangNhap.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.ThanhPho.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.KhachHang.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.NhanVien.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.SanPham.resources
