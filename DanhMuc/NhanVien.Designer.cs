@@ -80,10 +80,11 @@ namespace ADO.NET.DanhMuc
             // 
             // txtHinh
             // 
-            this.txtHinh.Location = new System.Drawing.Point(577, 151);
+            this.txtHinh.Location = new System.Drawing.Point(626, 151);
             this.txtHinh.Name = "txtHinh";
             this.txtHinh.Size = new System.Drawing.Size(100, 30);
             this.txtHinh.TabIndex = 4;
+            this.txtHinh.Visible = false;
             // 
             // dtNgayNV
             // 
@@ -207,12 +208,14 @@ namespace ADO.NET.DanhMuc
             // btnReload
             // 
             this.btnReload.AutoSize = true;
+            this.btnReload.Enabled = false;
             this.btnReload.Location = new System.Drawing.Point(288, 468);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(87, 35);
             this.btnReload.TabIndex = 2;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnThem
             // 
@@ -234,10 +237,12 @@ namespace ADO.NET.DanhMuc
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.AutoSize = true;
+            this.btnHuy.Enabled = false;
             this.btnHuy.Location = new System.Drawing.Point(440, 468);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(87, 35);
@@ -255,6 +260,7 @@ namespace ADO.NET.DanhMuc
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 

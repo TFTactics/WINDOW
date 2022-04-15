@@ -13,3 +13,4 @@ E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.ThanhPho.resources
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.KhachHang.resources
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.NhanVien.resources
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.SanPham.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.HoaDon.resources
