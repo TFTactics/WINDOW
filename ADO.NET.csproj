@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,41 +47,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhMuc\ChiTietHoaDon.cs">
+    <Compile Include="BS Layer\BLChiTietHoaDon.cs" />
+    <Compile Include="BS Layer\BLDangNhap.cs" />
+    <Compile Include="BS Layer\BLHoaDon.cs" />
+    <Compile Include="BS Layer\BLKhachHang.cs" />
+    <Compile Include="BS Layer\BLNhanVien.cs" />
+    <Compile Include="BS Layer\BLSanPham.cs" />
+    <Compile Include="BS Layer\BLThanhPho.cs" />
+    <Compile Include="DanhMuc\FormDangKi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\ChiTietHoaDon.Designer.cs">
-      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    <Compile Include="DanhMuc\FormDangKi.Designer.cs">
+      <DependentUpon>FormDangKi.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\HoaDon.cs">
+    <Compile Include="DanhMuc\QLChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <Compile Include="DanhMuc\QLChiTietHoaDon.Designer.cs">
+      <DependentUpon>QLChiTietHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\KhachHang.cs">
+    <Compile Include="DanhMuc\QLHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <Compile Include="DanhMuc\QLHoaDon.Designer.cs">
+      <DependentUpon>QLHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\NhanVien.cs">
+    <Compile Include="DanhMuc\QLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="DanhMuc\QLKhachHang.Designer.cs">
+      <DependentUpon>QLKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\SanPham.cs">
+    <Compile Include="DanhMuc\QLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\SanPham.Designer.cs">
-      <DependentUpon>SanPham.cs</DependentUpon>
+    <Compile Include="DanhMuc\QLNhanVien.Designer.cs">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\ThanhPho.cs">
+    <Compile Include="DanhMuc\QLSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\ThanhPho.Designer.cs">
-      <DependentUpon>ThanhPho.cs</DependentUpon>
+    <Compile Include="DanhMuc\QLSanPham.Designer.cs">
+      <DependentUpon>QLSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\QLThanhPho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\QLThanhPho.Designer.cs">
+      <DependentUpon>QLThanhPho.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,33 +102,54 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
+    <Compile Include="DanhMuc\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
+    <Compile Include="DanhMuc\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DanhMuc\HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <Compile Include="QuanLyBanHang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBanHang.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyBanHangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyBanHangDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBanHangDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DanhMuc\FormDangKi.resx">
+      <DependentUpon>FormDangKi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\QLChiTietHoaDon.resx">
+      <DependentUpon>QLChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\QLHoaDon.resx">
+      <DependentUpon>QLHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\SanPham.resx">
-      <DependentUpon>SanPham.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\QLKhachHang.resx">
+      <DependentUpon>QLKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\ThanhPho.resx">
-      <DependentUpon>ThanhPho.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\QLNhanVien.resx">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\QLSanPham.resx">
+      <DependentUpon>QLSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\QLThanhPho.resx">
+      <DependentUpon>QLThanhPho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
+    <EmbeddedResource Include="DanhMuc\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,9 +170,43 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyBanHang.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QuanLyBanHang.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyBanHang.dbml.layout">
+      <DependentUpon>QuanLyBanHang.dbml</DependentUpon>
+    </None>
+    <None Include="QuanLyBanHangDataSet.xsc">
+      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBanHangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyBanHangDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyBanHangDataSet.xss">
+      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBanHangDataSet1.xsc">
+      <DependentUpon>QuanLyBanHangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBanHangDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyBanHangDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyBanHangDataSet1.xss">
+      <DependentUpon>QuanLyBanHangDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

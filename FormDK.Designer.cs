@@ -1,7 +1,7 @@
 ﻿
-namespace ADO.NET.DanhMuc
+namespace ADO.NET
 {
-    partial class ChiTietHoaDon
+    partial class FormDK
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,15 @@ namespace ADO.NET.DanhMuc
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.SuspendLayout();
+            // 
+            // FormDK
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ChiTietHoaDon";
+            this.Name = "FormDK";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

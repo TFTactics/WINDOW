@@ -1,7 +1,7 @@
 ﻿
 namespace ADO.NET.DanhMuc
 {
-    partial class HoaDon
+    partial class QLHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace ADO.NET.DanhMuc
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -47,8 +48,18 @@ namespace ADO.NET.DanhMuc
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.quanLyBanHangDataSet1 = new ADO.NET.QuanLyBanHangDataSet1();
+            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonTableAdapter = new ADO.NET.QuanLyBanHangDataSet1TableAdapters.HoaDonTableAdapter();
+            this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayLapHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayNhanHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -127,8 +138,16 @@ namespace ADO.NET.DanhMuc
             // 
             // dgvHoaDon
             // 
+            this.dgvHoaDon.AutoGenerateColumns = false;
             this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHDDataGridViewTextBoxColumn,
+            this.maKHDataGridViewTextBoxColumn,
+            this.maNVDataGridViewTextBoxColumn,
+            this.ngayLapHDDataGridViewTextBoxColumn,
+            this.ngayNhanHangDataGridViewTextBoxColumn});
+            this.dgvHoaDon.DataSource = this.hoaDonBindingSource;
             this.dgvHoaDon.Location = new System.Drawing.Point(28, 224);
             this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvHoaDon.Name = "dgvHoaDon";
@@ -136,6 +155,7 @@ namespace ADO.NET.DanhMuc
             this.dgvHoaDon.RowTemplate.Height = 24;
             this.dgvHoaDon.Size = new System.Drawing.Size(829, 205);
             this.dgvHoaDon.TabIndex = 4;
+            this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
             // 
             // panel1
             // 
@@ -244,7 +264,61 @@ namespace ADO.NET.DanhMuc
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã HD:";
             // 
-            // HoaDon
+            // quanLyBanHangDataSet1
+            // 
+            this.quanLyBanHangDataSet1.DataSetName = "QuanLyBanHangDataSet1";
+            this.quanLyBanHangDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hoaDonBindingSource
+            // 
+            this.hoaDonBindingSource.DataMember = "HoaDon";
+            this.hoaDonBindingSource.DataSource = this.quanLyBanHangDataSet1;
+            // 
+            // hoaDonTableAdapter
+            // 
+            this.hoaDonTableAdapter.ClearBeforeFill = true;
+            // 
+            // maHDDataGridViewTextBoxColumn
+            // 
+            this.maHDDataGridViewTextBoxColumn.DataPropertyName = "MaHD";
+            this.maHDDataGridViewTextBoxColumn.HeaderText = "MaHD";
+            this.maHDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maHDDataGridViewTextBoxColumn.Name = "maHDDataGridViewTextBoxColumn";
+            this.maHDDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // maKHDataGridViewTextBoxColumn
+            // 
+            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.HeaderText = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
+            this.maKHDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // maNVDataGridViewTextBoxColumn
+            // 
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            this.maNVDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // ngayLapHDDataGridViewTextBoxColumn
+            // 
+            this.ngayLapHDDataGridViewTextBoxColumn.DataPropertyName = "NgayLapHD";
+            this.ngayLapHDDataGridViewTextBoxColumn.HeaderText = "NgayLapHD";
+            this.ngayLapHDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayLapHDDataGridViewTextBoxColumn.Name = "ngayLapHDDataGridViewTextBoxColumn";
+            this.ngayLapHDDataGridViewTextBoxColumn.Width = 148;
+            // 
+            // ngayNhanHangDataGridViewTextBoxColumn
+            // 
+            this.ngayNhanHangDataGridViewTextBoxColumn.DataPropertyName = "NgayNhanHang";
+            this.ngayNhanHangDataGridViewTextBoxColumn.HeaderText = "NgayNhanHang";
+            this.ngayNhanHangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ngayNhanHangDataGridViewTextBoxColumn.Name = "ngayNhanHangDataGridViewTextBoxColumn";
+            this.ngayNhanHangDataGridViewTextBoxColumn.Width = 181;
+            // 
+            // QLHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,13 +333,15 @@ namespace ADO.NET.DanhMuc
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "HoaDon";
+            this.Name = "QLHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoaDon";
             this.Load += new System.EventHandler(this.HoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +367,13 @@ namespace ADO.NET.DanhMuc
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtNgayNhanHang;
         private System.Windows.Forms.DateTimePicker dtNgayLapHD;
+        private QuanLyBanHangDataSet1 quanLyBanHangDataSet1;
+        private System.Windows.Forms.BindingSource hoaDonBindingSource;
+        private QuanLyBanHangDataSet1TableAdapters.HoaDonTableAdapter hoaDonTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayLapHDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayNhanHangDataGridViewTextBoxColumn;
     }
 }

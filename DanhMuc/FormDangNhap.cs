@@ -12,7 +12,6 @@ namespace ADO.NET
 {
     public partial class FormDangNhap : Form
     {
-
         public FormDangNhap()
         {
             InitializeComponent();
@@ -20,15 +19,14 @@ namespace ADO.NET
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (username.Text == "admin" && pass.Text == "admin")
+            BS_Layer.BLDangNhap login = new BS_Layer.BLDangNhap();
+            if (login.checkUser(txtUser.Text, txtPass.Text))
             {
                 Form1.bLogin = true;
                 this.Close();
             }
             else
-            {
-                username.Focus();
-            }
+                txtUser.Focus();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

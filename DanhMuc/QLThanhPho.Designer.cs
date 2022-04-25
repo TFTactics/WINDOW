@@ -1,7 +1,7 @@
 ﻿
 namespace ADO.NET.DanhMuc
 {
-    partial class ThanhPho
+    partial class QLThanhPho
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace ADO.NET.DanhMuc
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel = new System.Windows.Forms.Panel();
             this.txtTenThanhPho = new System.Windows.Forms.TextBox();
             this.txtMaThanhPho = new System.Windows.Forms.TextBox();
@@ -41,8 +42,14 @@ namespace ADO.NET.DanhMuc
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dgvThanhPho = new System.Windows.Forms.DataGridView();
+            this.tenThanhPhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanhPhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyBanHangDataSet = new ADO.NET.QuanLyBanHangDataSet();
+            this.thanhPhoTableAdapter = new ADO.NET.QuanLyBanHangDataSetTableAdapters.ThanhPhoTableAdapter();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhPho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thanhPhoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -159,16 +166,45 @@ namespace ADO.NET.DanhMuc
             // 
             // dgvThanhPho
             // 
+            this.dgvThanhPho.AutoGenerateColumns = false;
             this.dgvThanhPho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvThanhPho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThanhPho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tenThanhPhoDataGridViewTextBoxColumn});
+            this.dgvThanhPho.DataSource = this.thanhPhoBindingSource;
             this.dgvThanhPho.Location = new System.Drawing.Point(39, 130);
             this.dgvThanhPho.Name = "dgvThanhPho";
+            this.dgvThanhPho.ReadOnly = true;
             this.dgvThanhPho.RowHeadersWidth = 51;
             this.dgvThanhPho.RowTemplate.Height = 24;
             this.dgvThanhPho.Size = new System.Drawing.Size(502, 220);
             this.dgvThanhPho.TabIndex = 2;
+            this.dgvThanhPho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhPho_CellClick);
             // 
-            // ThanhPho
+            // tenThanhPhoDataGridViewTextBoxColumn
+            // 
+            this.tenThanhPhoDataGridViewTextBoxColumn.DataPropertyName = "TenThanhPho";
+            this.tenThanhPhoDataGridViewTextBoxColumn.HeaderText = "TenThanhPho";
+            this.tenThanhPhoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenThanhPhoDataGridViewTextBoxColumn.Name = "tenThanhPhoDataGridViewTextBoxColumn";
+            this.tenThanhPhoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenThanhPhoDataGridViewTextBoxColumn.Width = 168;
+            // 
+            // thanhPhoBindingSource
+            // 
+            this.thanhPhoBindingSource.DataMember = "ThanhPho";
+            this.thanhPhoBindingSource.DataSource = this.quanLyBanHangDataSet;
+            // 
+            // quanLyBanHangDataSet
+            // 
+            this.quanLyBanHangDataSet.DataSetName = "QuanLyBanHangDataSet";
+            this.quanLyBanHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // thanhPhoTableAdapter
+            // 
+            this.thanhPhoTableAdapter.ClearBeforeFill = true;
+            // 
+            // QLThanhPho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,13 +220,15 @@ namespace ADO.NET.DanhMuc
             this.Controls.Add(this.panel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "ThanhPho";
+            this.Name = "QLThanhPho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThanhPho";
             this.Load += new System.EventHandler(this.ThanhPho_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhPho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thanhPhoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +248,9 @@ namespace ADO.NET.DanhMuc
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dgvThanhPho;
+        private QuanLyBanHangDataSet quanLyBanHangDataSet;
+        private QuanLyBanHangDataSetTableAdapters.ThanhPhoTableAdapter thanhPhoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenThanhPhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource thanhPhoBindingSource;
     }
 }

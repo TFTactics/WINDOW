@@ -9,8 +9,10 @@ E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.csproj.CoreCompileInputs.cache
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.exe
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.pdb
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.FormDangNhap.resources
-E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.ThanhPho.resources
-E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.KhachHang.resources
 E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.NhanVien.resources
-E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.SanPham.resources
-E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.HoaDon.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.QLThanhPho.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.QLSanPham.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.QLKhachHang.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.QLHoaDon.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.QLChiTietHoaDon.resources
+E:\Data\WinForm\ADO.NET\obj\Debug\ADO.NET.DanhMuc.FormDangKi.resources

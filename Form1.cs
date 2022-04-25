@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 namespace ADO.NET
 {
@@ -27,6 +29,7 @@ namespace ADO.NET
             login.ShowDialog();
             if (bLogin)
             {
+                quảnLíDanhMụcĐơnToolStripMenuItem.Enabled = true;
                 this.tsmLogin.Enabled = false;
                 this.tsmExit.Enabled = true;
             }
@@ -34,13 +37,13 @@ namespace ADO.NET
 
         private void thànhPhốToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DanhMuc.ThanhPho tp = new DanhMuc.ThanhPho();
+            DanhMuc.QLThanhPho tp = new DanhMuc.QLThanhPho();
             tp.ShowDialog();
         }
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DanhMuc.KhachHang kh = new DanhMuc.KhachHang();
+            DanhMuc.QLKhachHang kh = new DanhMuc.QLKhachHang();
             kh.ShowDialog();
         }
 
@@ -52,20 +55,32 @@ namespace ADO.NET
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DanhMuc.SanPham sp = new DanhMuc.SanPham();
+            DanhMuc.QLSanPham sp = new DanhMuc.QLSanPham();
             sp.ShowDialog();
         }
 
         private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DanhMuc.HoaDon hd = new DanhMuc.HoaDon();
+            DanhMuc.QLHoaDon hd = new DanhMuc.QLHoaDon();
             hd.ShowDialog();
         }
 
         private void chiTiếtHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DanhMuc.ChiTietHoaDon cthd = new DanhMuc.ChiTietHoaDon();
+            DanhMuc.QLChiTietHoaDon cthd = new DanhMuc.QLChiTietHoaDon();
             cthd.ShowDialog();
+        }
+
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            tsmLogin.Enabled = true;
+            quảnLíDanhMụcĐơnToolStripMenuItem.Enabled = false;
+        }
+
+        private void đăngKíToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhMuc.FormDangKi dk = new DanhMuc.FormDangKi();
+            dk.ShowDialog();
         }
     }
 }

@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ADO.NET.DanhMuc
+namespace ADO.NET
 {
-    public partial class ChiTietHoaDon : Form
+    public partial class FormDK : ADO.NET.FormDangNhap
     {
-        public ChiTietHoaDon()
+        public FormDK()
         {
             InitializeComponent();
         }

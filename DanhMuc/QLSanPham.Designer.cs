@@ -1,7 +1,7 @@
 ﻿
 namespace ADO.NET.DanhMuc
 {
-    partial class SanPham
+    partial class QLSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace ADO.NET.DanhMuc
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDonVi = new System.Windows.Forms.TextBox();
             this.txtHinh = new System.Windows.Forms.TextBox();
@@ -47,8 +48,18 @@ namespace ADO.NET.DanhMuc
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.quanLyBanHangDataSet1 = new ADO.NET.QuanLyBanHangDataSet1();
+            this.sanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sanPhamTableAdapter = new ADO.NET.QuanLyBanHangDataSet1TableAdapters.SanPhamTableAdapter();
+            this.maSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donViTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,14 +163,24 @@ namespace ADO.NET.DanhMuc
             // 
             // dgvSanPham
             // 
+            this.dgvSanPham.AutoGenerateColumns = false;
             this.dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maSPDataGridViewTextBoxColumn,
+            this.tenSPDataGridViewTextBoxColumn,
+            this.donViTinhDataGridViewTextBoxColumn,
+            this.donGiaDataGridViewTextBoxColumn,
+            this.hinhDataGridViewTextBoxColumn});
+            this.dgvSanPham.DataSource = this.sanPhamBindingSource;
             this.dgvSanPham.Location = new System.Drawing.Point(20, 208);
             this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.ReadOnly = true;
             this.dgvSanPham.RowHeadersWidth = 51;
             this.dgvSanPham.RowTemplate.Height = 24;
             this.dgvSanPham.Size = new System.Drawing.Size(719, 201);
             this.dgvSanPham.TabIndex = 1;
+            this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             // 
             // btnThem
             // 
@@ -186,6 +207,7 @@ namespace ADO.NET.DanhMuc
             // btnReload
             // 
             this.btnReload.AutoSize = true;
+            this.btnReload.Enabled = false;
             this.btnReload.Location = new System.Drawing.Point(259, 435);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(87, 35);
@@ -197,6 +219,7 @@ namespace ADO.NET.DanhMuc
             // btnHuy
             // 
             this.btnHuy.AutoSize = true;
+            this.btnHuy.Enabled = false;
             this.btnHuy.Location = new System.Drawing.Point(381, 435);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(87, 35);
@@ -227,7 +250,61 @@ namespace ADO.NET.DanhMuc
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // SanPham
+            // quanLyBanHangDataSet1
+            // 
+            this.quanLyBanHangDataSet1.DataSetName = "QuanLyBanHangDataSet1";
+            this.quanLyBanHangDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sanPhamBindingSource
+            // 
+            this.sanPhamBindingSource.DataMember = "SanPham";
+            this.sanPhamBindingSource.DataSource = this.quanLyBanHangDataSet1;
+            // 
+            // sanPhamTableAdapter
+            // 
+            this.sanPhamTableAdapter.ClearBeforeFill = true;
+            // 
+            // maSPDataGridViewTextBoxColumn
+            // 
+            this.maSPDataGridViewTextBoxColumn.DataPropertyName = "MaSP";
+            this.maSPDataGridViewTextBoxColumn.HeaderText = "MaSP";
+            this.maSPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maSPDataGridViewTextBoxColumn.Name = "maSPDataGridViewTextBoxColumn";
+            this.maSPDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // tenSPDataGridViewTextBoxColumn
+            // 
+            this.tenSPDataGridViewTextBoxColumn.DataPropertyName = "TenSP";
+            this.tenSPDataGridViewTextBoxColumn.HeaderText = "TenSP";
+            this.tenSPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenSPDataGridViewTextBoxColumn.Name = "tenSPDataGridViewTextBoxColumn";
+            this.tenSPDataGridViewTextBoxColumn.Width = 103;
+            // 
+            // donViTinhDataGridViewTextBoxColumn
+            // 
+            this.donViTinhDataGridViewTextBoxColumn.DataPropertyName = "DonViTinh";
+            this.donViTinhDataGridViewTextBoxColumn.HeaderText = "DonViTinh";
+            this.donViTinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.donViTinhDataGridViewTextBoxColumn.Name = "donViTinhDataGridViewTextBoxColumn";
+            this.donViTinhDataGridViewTextBoxColumn.Width = 134;
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            this.donGiaDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // hinhDataGridViewTextBoxColumn
+            // 
+            this.hinhDataGridViewTextBoxColumn.DataPropertyName = "Hinh";
+            this.hinhDataGridViewTextBoxColumn.HeaderText = "Hinh";
+            this.hinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hinhDataGridViewTextBoxColumn.Name = "hinhDataGridViewTextBoxColumn";
+            this.hinhDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // QLSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,13 +320,15 @@ namespace ADO.NET.DanhMuc
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "SanPham";
+            this.Name = "QLSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SanPham";
             this.Load += new System.EventHandler(this.SanPham_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +354,13 @@ namespace ADO.NET.DanhMuc
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
+        private QuanLyBanHangDataSet1 quanLyBanHangDataSet1;
+        private System.Windows.Forms.BindingSource sanPhamBindingSource;
+        private QuanLyBanHangDataSet1TableAdapters.SanPhamTableAdapter sanPhamTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donViTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hinhDataGridViewTextBoxColumn;
     }
 }
